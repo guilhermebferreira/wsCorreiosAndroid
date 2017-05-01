@@ -6,227 +6,239 @@
     android:layout_height="match_parent"
     tools:context="guilherme.androidwscorreios.CalcPreco">
 
-    <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-        <!-- Here you put the rest of your current view-->
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
 
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        tools:layout_editor_absoluteY="0dp">
-
-
-        <Spinner
-            android:id="@+id/nCdServico"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawSelectorOnTop="true"
-            android:entries="@array/codServicos" />
-
-        <TextView
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/sendButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="CEP Origem" />
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            app:backgroundTint="@color/colorAccent"
+            app:srcCompat="@android:drawable/ic_menu_send"
+            tools:layout_editor_absoluteX="328dp"
+            tools:layout_editor_absoluteY="455dp" />
 
-        <guilherme.androidwscorreios.CepEditText
-            android:id="@+id/sCepOrigem"
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="@string/cep1" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="CEP Destino" />
-
-        <guilherme.androidwscorreios.CepEditText
-            android:id="@+id/sCepDestino"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="@string/cep2" />
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp">
+            <!-- Here you put the rest of your current view-->
 
 
-        <Spinner
-            android:id="@+id/nCdFormato"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:drawSelectorOnTop="true"
-            android:entries="@array/codFormato" />
-
-        <TextView
-            android:id="@+id/labelPeso"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_peso"
-            android:textAlignment="center" />
-
-        <EditText
-            android:id="@+id/nVlPeso"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/prompt_peso"
-            android:inputType="numberDecimal"
-            android:maxLines="1" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:layout_editor_absoluteY="0dp">
 
 
-        <TextView
-            android:id="@+id/labelComprimento"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_comprimento"
-            android:textAlignment="center" />
+                <Spinner
+                    android:id="@+id/nCdServico"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawSelectorOnTop="true"
+                    android:entries="@array/codServicos" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CEP Origem" />
+
+                <guilherme.androidwscorreios.CepEditText
+                    android:id="@+id/sCepOrigem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/cep1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CEP Destino" />
+
+                <guilherme.androidwscorreios.CepEditText
+                    android:id="@+id/sCepDestino"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:text="@string/cep2" />
 
 
-        <EditText
-            android:id="@+id/nVlComprimento"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/prompt_comprimento"
-            android:inputType="numberDecimal"
-            android:maxLines="1" />
+                <Spinner
+                    android:id="@+id/nCdFormato"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawSelectorOnTop="true"
+                    android:entries="@array/codFormato" />
+
+                <TextView
+                    android:id="@+id/labelPeso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_peso"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/nVlPeso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_peso"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1" />
 
 
-        <TextView
-            android:id="@+id/labelAltura"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_altura"
-            android:textAlignment="center" />
-
-        <EditText
-            android:id="@+id/nVlAltura"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/prompt_altura"
-            android:inputType="numberDecimal"
-            android:maxLines="1" />
+                <TextView
+                    android:id="@+id/labelComprimento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_comprimento"
+                    android:textAlignment="center" />
 
 
-        <TextView
-            android:id="@+id/labelLargura"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_largura"
-            android:textAlignment="center" />
-
-        <EditText
-            android:id="@+id/nVlLargura"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/prompt_largura"
-            android:inputType="numberDecimal"
-            android:maxLines="1" />
+                <EditText
+                    android:id="@+id/nVlComprimento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_comprimento"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1" />
 
 
-        <TextView
-            android:id="@+id/labelDiametro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_diametro"
-            android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/labelAltura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_altura"
+                    android:textAlignment="center" />
 
-        <EditText
-            android:id="@+id/nVlDiametro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/prompt_diametro"
-            android:inputType="numberDecimal"
-            android:maxLines="1" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mão propria" />
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/sCdMaoPropria"
-            android:checkedButton="@+id/MaoPropriaNao">
-
-            <RadioButton
-                android:id="@+id/MaoPropriaSim"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/sim" />
-
-            <RadioButton
-                android:id="@+id/MaoPropriaNao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/n_o" />
-        </RadioGroup>
+                <EditText
+                    android:id="@+id/nVlAltura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_altura"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1" />
 
 
-        <TextView
-            android:id="@+id/labelValor"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/text_diametro"
-            android:textAlignment="center" />
+                <TextView
+                    android:id="@+id/labelLargura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_largura"
+                    android:textAlignment="center" />
 
-        <EditText
-            android:id="@+id/nVlValorDeclarado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="@string/prompt_valor"
-            android:inputType="numberDecimal"
-            android:maxLines="1"
-            android:text="0.0" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/aviso_recebimento" />
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/sCdAvisoRecebimento"
-            android:checkedButton="@+id/AvisoNao">
-
-            <RadioButton
-                android:id="@+id/AvisoSim"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/sim" />
-
-            <RadioButton
-                android:id="@+id/AvisoNao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/n_o" />
-        </RadioGroup>
+                <EditText
+                    android:id="@+id/nVlLargura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_largura"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1" />
 
 
+                <TextView
+                    android:id="@+id/labelDiametro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_diametro"
+                    android:textAlignment="center" />
 
-    </LinearLayout>
-    </ScrollView>
+                <EditText
+                    android:id="@+id/nVlDiametro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_diametro"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/sendButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        app:srcCompat="@android:drawable/ic_menu_send"
-        app:backgroundTint="@color/colorAccent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mão propria" />
+
+                <RadioGroup
+                    android:id="@+id/sCdMaoPropria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checkedButton="@+id/MaoPropriaNao">
+
+                    <RadioButton
+                        android:id="@+id/MaoPropriaSim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/sim" />
+
+                    <RadioButton
+                        android:id="@+id/MaoPropriaNao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/n_o" />
+                </RadioGroup>
+
+
+                <TextView
+                    android:id="@+id/labelValor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_diametro"
+                    android:textAlignment="center" />
+
+                <EditText
+                    android:id="@+id/nVlValorDeclarado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_valor"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:text="0.0" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/aviso_recebimento" />
+
+                <RadioGroup
+                    android:id="@+id/sCdAvisoRecebimento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:checkedButton="@+id/AvisoNao">
+
+                    <RadioButton
+                        android:id="@+id/AvisoSim"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/sim" />
+
+                    <RadioButton
+                        android:id="@+id/AvisoNao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/n_o" />
+                </RadioGroup>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+
+    </android.support.design.widget.CoordinatorLayout>
 
 
 </android.support.constraint.ConstraintLayout>
