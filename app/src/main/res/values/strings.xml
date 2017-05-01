@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">AndroidWSCorreios</string>
+    <string name="cep1">30170010</string>
+    <string name="cep2">77015616</string>
+    <string name="sim">Sim</string>
+    <string name="n_o">Não</string>
+    <string name="prompt_altura">Altura da encomenda (incluindo embalagem), em centímetros. Se o formato for envelope, informar zero (0).</string>
+    <string name="text_altura">Altura (cm)</string>
+    <string name="prompt_peso">Peso</string>
+    <string name="text_peso">Peso</string>
+    <string name="prompt_comprimento">Comprimento da encomenda (incluindo embalagem),em centímetros.</string>
+    <string name="text_comprimento">Comprimento</string>
+    <string name="prompt_diametro">Diâmetro da encomenda (incluindo embalagem), em centímetros.</string>
+    <string name="prompt_largura">Largura da encomenda (incluindo embalagem), em centímetros.</string>
+    <string name="text_diametro">Diametro</string>
+    <string name="text_largura">Largura</string>
+    <string name="prompt_valor">Indica se a encomenda será entregue com o serviço adicional valor declarado.</string>
+    <string name="aviso_recebimento">Aviso Recebimento</string>
+
+    <string-array name="codServicos">
+        <item>40010 - SEDEX Varejo</item>
+        <item>40045 - SEDEX a Cobrar Varejo</item>
+        <item>40215 - SEDEX 10 Varejo</item>
+        <item>40290 - SEDEX Hoje Varejo</item>
+        <item>41106 - PAC Varejo</item>
+    </string-array>
+    <string-array name="codFormato">
+        <item>1 – Formato caixa/pacote</item>
+        <item>2 – Formato rolo/prisma</item>
+        <item>3 - Envelope</item> 
+    </string-array>
+ 
+</resources>
